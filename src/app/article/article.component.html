@@ -1,0 +1,48 @@
+
+<!-- Main section start -->
+<main class="main">
+  <section class="main-slider">
+    <div class="article-slider">
+        <owl-carousel-o [options]="customOptions">
+          <ng-template carouselSlide *ngFor="let article of articles;">
+            <div class="slide">
+              <img src={{article.urlToImage}}  alt=article.title>
+              <div class="slide-info">
+                <h2>{{article.title}}</h2>
+                <hr />
+                <p>
+                  {{article.content}}
+                </p>
+              </div>
+            </div>
+          </ng-template>
+
+        </owl-carousel-o>
+    </div>
+  </section>
+  <section class="news-section">
+    <img src="../assets/images/logo.png" alt="m-news" class="title" />
+    <hr class="blue" />
+
+
+    <div>
+    <div class="columns" >
+
+      <a class="article" href="#"   *ngFor="let article of articles;  let i = index" >
+        <img src={{article.urlToImage}} alt={{article.title}}>
+        <div class="article-info">
+          <h2>{{article.title}}</h2>
+        </div>
+        <div class="new-overlay" *ngIf="(i == 0)">
+          <span class="top-right new">New</span>
+        </div>
+      </a>
+
+    </div>
+
+
+
+  </div>
+  </section>
+
+</main>

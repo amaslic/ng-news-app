@@ -1,0 +1,23 @@
+
+<!-- Header start -->
+<header class="header">
+  <nav>
+    <ul class="menu" [ngClass]="showMenu ? 'active': ''">
+      <li class="logo"><a href="#"> <img src="../assets/images/logo.png" alt="m-news logo"></a></li>
+      <li class="item"><a href="#">Home</a></li>
+      <li class="item"><a href="#">About</a></li>
+      <li class="item"><a href="#">Contact</a></li>
+      <li class="item">
+        <select class="item">
+          <option selected>Categories</option>
+          <option>Football</option>
+          <option>Basketball</option>
+        </select>
+      </li>
+      <li class="item button"><a href="#">Portal</a></li>
+      <li class="item button secondary"><a href="#">Top News</a></li>
+      <li class="toggle" (click)= "showMenu = !showMenu">&#9776; </li>
+    </ul>
+  </nav>
+</header>
+<!-- Header end-->
